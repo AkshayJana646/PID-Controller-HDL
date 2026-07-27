@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="https://www.mathworks.com/help/schema/MathWorksDocPage">
+<head>
+<title>High-level DUT Information Report for pid_controller_fixpt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript" src="file://C:/Program%20Files/MATLAB/R2025b/toolbox/hdlcoder/hdlcommon/js_css/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="file://C:/Program%20Files/MATLAB/R2025b/toolbox/hdlcoder/hdlcommon/js_css/docscripts.js"></script>
+        
+        <link href="file://C:/Program%20Files/MATLAB/R2025b/toolbox/hdlcoder/hdlcommon/js_css/ice_960.css" rel="stylesheet" type="text/css">
+        <link href="file://C:/Program%20Files/MATLAB/R2025b/toolbox/hdlcoder/hdlcommon/js_css/HDLsite5.css" rel="stylesheet" type="text/css">
+        <link href="file://C:/Program%20Files/MATLAB/R2025b/toolbox/hdlcoder/hdlcommon/js_css/ice_doc_center.css" rel="stylesheet" type="text/css">
+        <link href="file://C:/Program%20Files/MATLAB/R2025b/toolbox/hdlcoder/hdlcommon/js_css/ice_doc_center_installed.css" rel="stylesheet" type="text/css">
+        <link href="file://C:/Program%20Files/MATLAB/R2025b/toolbox/hdlcoder/hdlcommon/js_css/ice_doc_center_print.css" rel="stylesheet" type="text/css" media="print">
+        <script type="text/javascript">
+            if (navigator.appName != "ICEbrowser") {
+            var cssStyleSheets = $("link").filter(function(){
+            var href = $(this).attr('href');
+            return href.indexOf("ice_doc_center_print.css") == -1});
+            var hrefElements = $.map(cssStyleSheets, function(elem) {
+            var href = $(elem).attr('href');
+            var hrefArray = href.split("/");
+            hrefArray[hrefArray.length - 1] = hrefArray[hrefArray.length - 1].replace("ice_", "");
+            return {
+            href: hrefArray.join("/"),
+            media: $(elem).attr('media')
+            };
+            });
+            cssStyleSheets.remove();
+            for (var i = 0; i < hrefElements.length; i++) {
+            if ($.browser.msie && $.browser.version <= 8) {
+            document.createStyleSheet(hrefElements[i].href);
+            } else {
+            var link = $('<link rel="stylesheet" href=' + hrefElements[i].href + ' type="text/css" />');
+            if (hrefElements[i].media) {
+            link.attr('media', hrefElements[i].media);
+            }
+            $('head').append(link);
+            }
+            }
+            }
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+<div class="container_192">
+<div class="grid_192">
+ <div class="page_container"><div class="content_frame">
+ <BR/> <BR/><DIV ><H1>High-level DUT Information Report for pid_controller_fixpt</H1>
+<BR><H2>Generated on 2026-07-27 13:46:47</h2></DIV>
+<br><h2>Input ports</h2>
+<DIV class="content_container"><TABLE class="table" style="border-collapse: collapse; width: 100<TR style="background-color: #ffffff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4><b>Port Name</b></H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4><b>Datatype</b></H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4><b>Bits</b></H4></TD>
+</TR>
+<TR style="background-color: #eeeeff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>clk</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>boolean</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>1</H4></TD>
+</TR>
+<TR style="background-color: #ffffff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>reset</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>boolean</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>1</H4></TD>
+</TR>
+<TR style="background-color: #eeeeff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>clk_enable</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>boolean</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>1</H4></TD>
+</TR>
+<TR style="background-color: #ffffff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>error</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>sfix16_En14</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>16</H4></TD>
+</TR>
+<TR style="background-color: #eeeeff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>valid</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>boolean</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>1</H4></TD>
+</TR>
+<TR style="background-color: #ffffff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>Kp</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>sfix16_En12</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>16</H4></TD>
+</TR>
+<TR style="background-color: #eeeeff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>Ki_Ts</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>sfix16_En14</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>16</H4></TD>
+</TR>
+<TR style="background-color: #ffffff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>Kd_Ts</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>sfix16_En12</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>16</H4></TD>
+</TR>
+<TR style="background-color: #eeeeff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>uMax</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>sfix16_En14</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>16</H4></TD>
+</TR>
+<TR style="background-color: #ffffff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>uMin</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>sfix16_En14</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>16</H4></TD>
+</TR>
+</TABLE></DIV><br /><br />
+<br><h2>Output ports</h2>
+<DIV class="content_container"><TABLE class="table" style="border-collapse: collapse; width: 100<TR style="background-color: #ffffff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4><b>Port Name</b></H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4><b>Datatype</b></H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4><b>Bits</b></H4></TD>
+</TR>
+<TR style="background-color: #eeeeff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>ce_out</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>boolean</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>1</H4></TD>
+</TR>
+<TR style="background-color: #ffffff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>u</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>sfix16_En14</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>16</H4></TD>
+</TR>
+<TR style="background-color: #eeeeff; margin: 5px;">
+<TD style="border: 1px solid #000000; text-align: left; padding: 8px; min-width: 50px;"><H4>saturated</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>boolean</H4></TD>
+<TD style="border: 1px solid #000000; text-align: center; padding: 8px; min-width: 50px;"><H4>1</H4></TD>
+</TR>
+</TABLE></DIV><br /><br />
+<BR><BR> </div></div></div></div>
+                    <div class="grid_192">
+                        <div class="footer_container">
+                            <div class="footer">
+                                <ul class="footernav">
+                                    <li class="footernav_trademarks"><a href="C:/Program Files/MATLAB/R2025b/help/acknowledgments.html">Acknowledgments</a></li>
+                                    <li class="footernav_trademarks"><a href="C:/Program%20Files/MATLAB/R2025b/trademarks.txt">Trademarks</a></li>
+                                    <li class="footernav_patents"><a href="C:/Program%20Files/MATLAB/R2025b/patents.txt">Patents</a></li>
+                                    <li class="footernav_help"><a href="C:/Program Files/MATLAB/R2025b/license_agreement.txt">Terms of Use</a></li>
+                                </ul>
+                                <div class="copyright">&copy; 1994-2026 The MathWorks, Inc.</div>
+                            </div>
+                        </div>
+                    </div>
+
+        <script type="text/javascript">
+
+$(document).ready( setTimeout( function () {
+                   $(".expandAllLink").trigger('click');
+            }, 50 ) );
+
+        </script>
+        
+</body>
+</html>
