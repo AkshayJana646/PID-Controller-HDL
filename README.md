@@ -55,5 +55,3 @@ From `resource_report.html` (HDL Coder, generated 2026-07-27):
   messages, warnings, or errors for the design.
 - The 100 MHz figure is the HDL Coder target frequency. This
   repository does not include synthesis or timing results.
-- A testbench simulation log and an anti-windup response plot are not
-  included yet.
