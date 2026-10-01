@@ -24,6 +24,9 @@ anti-windup, with Verilog generated through MATLAB HDL Coder.
 
 ## Repository layout
 - `pid_controller_fixpt.m`: fixed-point controller
+- `anti_windup_demo.m`: simulates the controller against a simple
+  plant with and without the integrator revert and saves
+  `anti_windup_response.png`
 - `generate_verilog.m`: HDL Coder script that generates the Verilog
   (testbench generation is enabled in the config)
 - `codegen/pid_controller_fixpt/hdlsrc/`: generated Verilog
