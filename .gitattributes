@@ -1,0 +1,2 @@
+*.html linguist-generated=true
+codegen/**/*.html linguist-generated=true
