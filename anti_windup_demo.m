@@ -63,6 +63,7 @@ fprintf('  without anti-windup: %d\n', postNoAW);
 
 %% Plot
 fig = figure('Position', [100 100 900 650], 'Color', 'w');
+theme(fig, 'light');   % keep text readable on a white background (R2025a+)
 t = 1:N;
 
 subplot(2,1,1);
