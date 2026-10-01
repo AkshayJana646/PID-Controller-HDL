@@ -66,3 +66,22 @@ Ports of the generated module:
   messages, warnings, or errors for the design.
 - The 100 MHz figure is the HDL Coder target frequency. This
   repository does not include synthesis or timing results.
+
+### Anti-windup response
+`anti_windup_demo.m` drives `pid_controller_fixpt` (MATLAB fixed-point
+model) against a first-order plant with output limits of +/-1. The
+setpoint is 1.5 for the first 600 samples, which the limited output
+cannot reach, then drops to 0.5. The script compares the controller
+with the same controller minus the integrator revert.
+
+![Anti-windup comparison](anti_windup_response.png)
+
+- Without the revert, the integrator keeps accumulating while the
+  output is clamped, so the output stays pinned at the limit for 490
+  samples after the setpoint drops (the plant output returns to the
+  setpoint only after about sample 1090).
+- With the revert, the output leaves saturation immediately: 0
+  saturated samples after the drop.
+- This is a simulation of the MATLAB fixed-point model, not of the
+  generated Verilog. The demo uses `Ki_Ts = 0.02`; the HDL generation
+  script uses 0.005.
