@@ -38,16 +38,24 @@ anti-windup, with Verilog generated through MATLAB HDL Coder.
 ## Results
 
 ### Generated hardware
-From `resource_report.html` (HDL Coder, generated 2026-07-27):
+From the HDL Coder resource utilization report (`resource_report.html`).
+The design was generated on 2026-07-27 and regenerated on 2026-10-01
+with identical resource counts.
 
-| Resource | Count |
-|---|---|
-| Multipliers | 3 (two 16x16, one 16x17) |
-| Adders / subtractors | 6 |
-| Registers | 2 (one 16-bit, one 32-bit; 48 register bits) |
-| Multiplexers | 15 |
-| RAMs | 0 |
-| I/O bits | 118 (100 in, 18 out) |
+| Resource | Count | Detail |
+|---|---|---|
+| Multipliers | 3 | two 16x16-bit, one 16x17-bit |
+| Adders / subtractors | 6 | 33x33, 35x35 and 36x36-bit adders; two 33x33-bit and one 17x17-bit subtractors |
+| Registers | 2 | one 16-bit, one 32-bit (48 flip-flops total) |
+| Multiplexers | 15 | 16-bit 2-to-1 (4), 32-bit 3-to-1 (4), 32-bit 2-to-1 (3), 16-bit 3-to-1 (1), 1-bit 2-to-1 (3) |
+| RAMs | 0 | |
+| Shifters | 0 | |
+| I/O bits | 118 | 100 in, 18 out |
+
+Ports of the generated module:
+- Inputs: `clk`, `reset`, `clk_enable`, `valid` (1 bit each); `error`,
+  `Kp`, `Ki_Ts`, `Kd_Ts`, `uMax`, `uMin` (16 bits each)
+- Outputs: `ce_out` (1 bit), `u` (16 bits), `saturated` (1 bit)
 
 ### Verification
 - The HDL Code Generation Conformance Report
